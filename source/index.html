@@ -19,19 +19,20 @@
           <button class="menu__toggle menu__toggle--close">Закрыть меню</button>
 
           <div class="menu__wrapper">
-            <ul class="menu__list">
+            <ul class="menu__list main-nav">
               <li class="menu__item">
                 <a class="menu__link" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="form.html">Вязание на заказ</a>
               </li>
-              <li class="menu__item search">
-                <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-                  <input class="search__input" type="search" placeholder="Поиск по сайту">
-                </form>
+            </ul>
+
+            <ul class="menu__list user-menu">
+              <li class="menu__item menu__item--search">
+                <a class="menu__link" href="">Поиск по сайту</a>
               </li>
-              <li class="menu__item">
+              <li class="menu__item menu__item--basket">
                 <a class="menu__link" href="">Корзина: пока пуста</a>
               </li>
             </ul>
@@ -39,7 +40,7 @@
         </nav>
       </div>
 
-      <div class="header__description description main-page">
+      <div class="header__description header__description--main-page description">
         <h1 class="description__title">Милые штучки ручной работы для дома</h1>
         <ul class="description__list">
           <li class="descriprion__item descriprion__item--products">
@@ -57,20 +58,20 @@
         <h2 class="visually-hidden">Товары магазина</h2>
         <h3 class="product__title">Вязаные корзинки</h3>
         <span class="product__legend product__legend--popular">Товар недели</span>
-        <p class="product__description">Экологически чистая пряжа, руная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
         <table class="product__table table">
           <tr class="table__row">
-            <td class="table__item">Цвет:</td>
-            <td class="table__item-description">«Тиффани»/серый</td>
+            <td class="table__data table__data--property">Цвет:</td>
+            <td class="table__data table__data--description">«Тиффани»/серый</td>
           </tr>
           <tr class="table__row">
-            <td class="table__item">Диаметр:</td>
-            <td class="table__item-description">25 см</td>
+            <td class="table__data table__data--property">Диаметр:</td>
+            <td class="table__data table__data--description">25 см</td>
           </tr>
           <tr class="table__row">
-            <td class="table__item">Высота:</td>
-            <td class="table__item-description">15 см</td>
+            <td class="table__data table__data--property">Высота:</td>
+            <td class="table__data table__data--description">15 см</td>
           </tr>
         </table>
 
@@ -83,29 +84,12 @@
     <section class="info">
       <h2 class="info__title">Коротко о нас:</h2>
       <ul class="info__list">
-        <li class="info__item">
-          <span class="info__icon info__icon--eco"></span>
-          Экологически чистые материалы
-        </li>
-        <li class="info__item">
-          <span class="info__icon info__icon--money"></span>
-          Скандинавский стиль по российской цене
-        </li>
-        <li class="info__item">
-          <span class="info__icon info__icon--like"></span>
-          Увеличивает лайки на фотографиях
-        </li>
-        <li class="info__item">
-          <span class="info__icon info__icon--handmade"></span>
-          Связано вручную с любовью и умилением
-        </li>
-        <li class="info__item">
-          <span class="info__icon info__icon--country"></span>
-          Поддержка отечественного производителя</li>
-        <li class="info__item">
-          <span class="info__icon info__icon--wrapper"></span>
-          Поставляется в подарочной упаковке
-        </li>
+        <li class="info__item info__item--eco">Экологически чистые материалы</li>
+        <li class="info__item info__item--price">Скандинавский стиль по российской цене</li>
+        <li class="info__item info__item--like">Увеличивает лайки на фотографиях</li>
+        <li class="info__item info__item--handmade">Связано вручную с любовью и умилением</li>
+        <li class="info__item info__item--country">Поддержка отечественного производителя</li>
+        <li class="info__item info__item--wrapper">Поставляется в подарочной упаковке</li>
       </ul>
     </section>
 
@@ -129,12 +113,12 @@
       <h2 class="contacts__title">Контакты</h2>
       <table class="contacts__table table">
         <tr class="table__row">
-          <td class="table__item">e-mail:</td>
-          <td class="table__item-descriprion">info@mimimishkashop.ru</td>
+          <td class="table__data table__data--property">e-mail:</td>
+          <td class="table__data table__data--descriprion">info@mimimishkashop.ru</td>
         </tr>
         <tr class="table__row">
-          <td class="table__item">адрес:</td>
-          <td class="table__item-descriprion">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          <td class="table__data table__data--property">адрес:</td>
+          <td class="table__data table__data--descriprion">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
         </tr>
       </table>
       <img class="contacts__map" src="" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" width="" height="">
@@ -175,7 +159,7 @@
       <div class="footer__copyright copyright">
         <span class="copyright__comment">Разработано:</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработан HTML-академией">
-          <img src="i" alt="HTML-академия" width="" height="">
+          <img src="" alt="HTML-академия" width="" height="">
         </a>
       </div>
     </footer>

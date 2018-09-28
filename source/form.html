@@ -19,19 +19,20 @@
           <button class="menu__toggle menu__toggle--close">Закрыть меню</button>
 
           <div class="menu__wrapper">
-            <ul class="menu__list">
+            <ul class="menu__list main-nav">
               <li class="menu__item">
                 <a class="menu__link" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="form.html">Вязание на заказ</a>
               </li>
-              <li class="menu__item search">
-                <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-                  <input class="search__input" type="search" placeholder="Поиск по сайту">
-                </form>
+            </ul>
+
+            <ul class="menu__list user-menu">
+              <li class="menu__item menu__item--search">
+                <a class="menu__link" href="">Поиск по сайту</a>
               </li>
-              <li class="menu__item">
+              <li class="menu__item menu__item--basket">
                 <a class="menu__link" href="">Корзина: пока пуста</a>
               </li>
             </ul>
@@ -45,7 +46,7 @@
     </header>
 
     <section class="request">
-      <h2 class="">Каталог товаров</h2>
+      <h2 class="visually-hidden">Аксессуар или игрушка на заказ</h2>
       <p class="request__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
       <form class="request__form filters" action="https://echo.htmlacademy.ru" method="get">
@@ -119,19 +120,22 @@
         <fieldset class="filter filter-phone">
           <legend class="visually-hidden">Телефон</legend>
           <h3 class="filter__title">Тел</h3>
-          <input class="filter__input filter__input--text" type="tel" name="phone-number" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="+7 XXX XXX XX XX*" required>
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input class="filter__input filter__input--text" type="tel" name="phone-number" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="+7 XXX XXX XX XX*" id="phone" required>
         </fieldset>
 
         <fieldset class="filter filter-email">
           <legend class="visually-hidden">E-mail</legend>
           <h3 class="filter__title">E-mail</h3>
-          <input class="filter__input filter__input--text" type="email" name="email" placeholder="Вам Email*" required>
+          <label class="visually-hidden" for="email">E-mail</label>
+          <input class="filter__input filter__input--text" type="email" name="email" placeholder="Ваш Email*" id="email" required>
         </fieldset>
 
         <fieldset class="filter filter-other">
           <legend class="visually-hidden">Дополнительно</legend>
           <h3 class="filter__title">Доп</h3>
-          <textarea class="filter__textarea" value="Опишите все ваши пожелания к заказу"></textarea>
+          <label class="visually-hidden" for="comment">Комментарий</label>
+          <textarea class="filter__textarea" placeholder="Опишите все ваши пожелания к заказу" id="comment"></textarea>
         </fieldset>
 
         <p class="filter__comment">*Поля обязательны для заполнения</p>
@@ -157,7 +161,7 @@
       <div class="footer__copyright copyright">
         <span class="copyright__comment">Разработано:</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработан HTML-академией">
-          <img src="i" alt="HTML-академия" width="" height="">
+          <img src="" alt="HTML-академия" width="" height="">
         </a>
       </div>
     </footer>
