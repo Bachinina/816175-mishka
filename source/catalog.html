@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -11,46 +12,46 @@
           Магазин товаров ручной работы "Мишка"
         </h1>
         <a class="header__logo" href="index.html">
-          <img class="header__logo-image" src="" alt="Магазин товаров ручной работы Мишка" width="" height="">
+          <img class="header__logo-image" src="img/logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="86" height="35">
         </a>
-
-        <nav class="header__menu menu">
-          <button class="menu__toggle menu__toggle--open">Открыть меню</button>
-          <button class="menu__toggle menu__toggle--close">Закрыть меню</button>
-
-          <div class="menu__wrapper">
-            <ul class="menu__list main-nav">
-              <li class="menu__item">
-                <a class="menu__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="form.html">Вязание на заказ</a>
-              </li>
-            </ul>
-
-            <ul class="menu__list user-menu">
-              <li class="menu__item menu__item--search">
-                <a class="menu__link" href="">Поиск по сайту</a>
-              </li>
-              <li class="menu__item menu__item--basket">
-                <a class="menu__link" href="">Корзина: пока пуста</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </div>
+
+      <nav class="header__menu menu">
+        <button class="menu__toggle menu__toggle--open" aria-label="Открыть меню"></button>
+        <button class="menu__toggle menu__toggle--close visually-hidden" aria-label="Закрыть меню"></button>
+
+        <div class="menu__wrapper">
+          <ul class="menu__list main-nav">
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+
+          <ul class="menu__list user-menu">
+            <li class="menu__item menu__item--search">
+              <a class="menu__link" href="">Поиск по сайту</a>
+            </li>
+            <li class="menu__item menu__item--basket">
+              <a class="menu__link" href="">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
       <div class="header__description description">
         <h1 class="description__title">Каталог товаров</h1>
       </div>
     </header>
 
-    <section class="catalog">
+    <section class="catalog container">
       <h2 class="visually-hidden">Товары</h2>
-      <ul class="catalog__list">
+      <ul class="catalog__list products">
         <li class="catalog__item product">
           <a class="product__link">
-            <img class="product__img" src="" alt="Зайчик-попрыгайчик" width="" height="">
+            <img class="product__img" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="462" height="316">
             <span class="product__title">Зайчик-попрыгайчик</span>
             <span class="product__description">Рост 30 см, вес 200 г</span>
             <span class="product__price">1 200 руб.</span>
@@ -58,7 +59,7 @@
         </li>
         <li class="catalog__item product">
           <a class="product__link">
-            <img class="product__img" src="" alt="Корзинка для белья" width="" height="">
+            <img class="product__img" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
             <span class="product__title">Корзинка для белья</span>
             <span class="product__description">Диаметр 15 см, высота 10 см</span>
             <span class="product__price">690 руб.</span>
@@ -66,7 +67,7 @@
         </li>
         <li class="catalog__item product">
           <a class="product__link">
-            <img class="product__img" src="" alt="Большая корзинка для игрушек" width="" height="">
+            <img class="product__img" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
             <span class="product__title">Большая корзинка для игрушек</span>
             <span class="product__description">Диаметр 30 см, высота 30 см</span>
             <span class="product__price">1 500 руб.</span>
@@ -75,7 +76,7 @@
       </ul>
     </section>
 
-    <section class="production">
+    <section class="production container">
       <h2 class="production__title">Процесс производства</h2>
       <video class="production__video" width="" height="" poster="" controls="controls">
         <source src="" type="">
@@ -89,36 +90,36 @@
       <span class="purchase__comment">Выберите размер:</span>
       <form class="purchase__form" action="https://echo.htmlacademy.ru" method="get">
         <div class="size">
-          <input class="size__input visually-hidden" type="radio" name="size" value="S" id="size-S">
-          <label for="size-S">S</label>
+          <input class="size__input visually-hidden" type="radio" name="size" value="S" id="size-S" checked>
+          <label class="size__label" for="size-S">S</label>
 
           <input class="size__input visually-hidden" type="radio" name="size" value="M" id="size-M">
-          <label for="size-M">M</label>
+          <label class="size__label" for="size-M">M</label>
 
           <input class="size__input visually-hidden" type="radio" name="size" value="L" id="size-L">
-          <label for="size-L">L</label>
+          <label class="size__label" for="size-L">L</label>
         </div>
         <button class="purchase__button button" type="submit">Добавить</button>
       </form>
     </section>
 
     <footer class="footer">
-      <ul class="footer__social">
-        <li class="social__item">
-          <a class="social__button social__button--instagram" href="#" aria-label="Присоединяйтесь к нам в Инстаграме!">Instagram</a>
-        </li>
-        <li class="social__item">
-          <a class="social__button social__button--fb" href="#" aria-label="Присоединяйтесь к нам на Фейсбуке!">FaceBook</a>
-        </li>
-        <li class="social__item">
-          <a class="social__button social__button--twitter" href="#" aria-label="Присоединяйтесь к нам в Твиттере!">Twitter</a>
-        </li>
-      </ul>
+    <ul class="footer__social  social container">
+      <li class="social__item">
+        <a class="social__button social__button--instagram" href="#" aria-label="Присоединяйтесь к нам в Инстаграме!">Instagram</a>
+      </li>
+      <li class="social__item">
+        <a class="social__button social__button--fb" href="#" aria-label="Присоединяйтесь к нам на Фейсбуке!">FaceBook</a>
+      </li>
+      <li class="social__item">
+        <a class="social__button social__button--twitter" href="#" aria-label="Присоединяйтесь к нам в Твиттере!">Twitter</a>
+      </li>
+    </ul>
 
       <div class="footer__copyright copyright">
-        <span class="copyright__comment">Разработано:</span>
+        <span class="copyright__comment">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработан HTML-академией">
-          <img src="" alt="HTML-академия" width="" height="">
+          <img src="img/logo-htmlacademy.svg" alt="HTML-академия" width="27" height="34">
         </a>
       </div>
     </footer>
