@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -13,15 +14,14 @@
       <h1 class="visually-hidden">
         Магазин товаров ручной работы "Мишка"
       </h1>
-      <a class="header__logo" href="">
-        <img class="header__logo-img" src="img/logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="86" height="35">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="img/logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="86" height="35">
       </a>
+      <button class="header__button-menu header__button-menu--open" aria-label="Открыть меню"></button>
+      <button class="header__button-menu header__button-menu--close visually-hidden" aria-label="Закрыть меню"></button>
     </div>
 
     <nav class="header__menu menu">
-      <button class="menu__toggle menu__toggle--open" aria-label="Открыть меню"></button>
-      <button class="menu__toggle menu__toggle--close visually-hidden" aria-label="Закрыть меню"></button>
-
       <div class="menu__wrapper">
         <ul class="menu__list main-nav">
           <li class="menu__item">

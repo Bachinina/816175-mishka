@@ -2,9 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
     <header class="header">
       <div class="header__main-menu">
@@ -14,12 +16,11 @@
         <a class="header__logo" href="index.html">
           <img class="header__logo-image" src="img/logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="86" height="35">
         </a>
+        <button class="header__button-menu header__button-menu--open" aria-label="Открыть меню"></button>
+        <button class="header__button-menu header__button-menu--close visually-hidden" aria-label="Закрыть меню"></button>
       </div>
 
       <nav class="header__menu menu">
-        <button class="menu__toggle menu__toggle--open" aria-label="Открыть меню"></button>
-        <button class="menu__toggle menu__toggle--close visually-hidden" aria-label="Закрыть меню"></button>
-
         <div class="menu__wrapper">
           <ul class="menu__list main-nav">
             <li class="menu__item">
@@ -51,26 +52,32 @@
       <ul class="catalog__list products">
         <li class="catalog__item product">
           <a class="product__link">
-            <img class="product__img" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="462" height="316">
-            <span class="product__title">Зайчик-попрыгайчик</span>
-            <span class="product__description">Рост 30 см, вес 200 г</span>
-            <span class="product__price">1 200 руб.</span>
+            <img class="product__img" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+            <div class="product__info">
+              <span class="product__title">Зайчик-попрыгайчик</span>
+              <span class="product__description">Рост 30 см, вес 200 г</span>
+              <span class="product__price">1 200 руб.</span>
+            </div>
           </a>
         </li>
         <li class="catalog__item product">
           <a class="product__link">
             <img class="product__img" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
-            <span class="product__title">Корзинка для белья</span>
-            <span class="product__description">Диаметр 15 см, высота 10 см</span>
-            <span class="product__price">690 руб.</span>
+            <div class="product__info">
+              <span class="product__title">Корзинка для белья</span>
+              <span class="product__description">Диаметр 15 см, высота 10 см</span>
+              <span class="product__price">690 руб.</span>
+            </div>
           </a>
         </li>
         <li class="catalog__item product">
           <a class="product__link">
             <img class="product__img" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
-            <span class="product__title">Большая корзинка для игрушек</span>
-            <span class="product__description">Диаметр 30 см, высота 30 см</span>
-            <span class="product__price">1 500 руб.</span>
+            <div class="product__info">
+              <span class="product__title">Большая корзинка для игрушек</span>
+              <span class="product__description">Диаметр 30 см, высота 30 см</span>
+              <span class="product__price">1 500 руб.</span>
+            </div>
           </a>
         </li>
       </ul>
@@ -78,7 +85,7 @@
 
     <section class="production container">
       <h2 class="production__title">Процесс производства</h2>
-      <video class="production__video" width="" height="" poster="" controls="controls">
+      <video class="production__video" width="" height="" poster="img/video-mobile@1x.jpg" controls="controls">
         <source src="" type="">
       </video>
       <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -116,13 +123,13 @@
       </li>
     </ul>
 
-      <div class="footer__copyright copyright">
-        <span class="copyright__comment">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработан HTML-академией">
-          <img src="img/logo-htmlacademy.svg" alt="HTML-академия" width="27" height="34">
-        </a>
-      </div>
-    </footer>
+    <div class="footer__copyright copyright">
+      <span class="copyright__comment">Разработано</span>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработан HTML-академией">
+        <img src="img/logo-htmlacademy.svg" alt="HTML-академия" width="27" height="34">
+      </a>
+    </div>
+  </footer>
 
   </body>
 </html>
