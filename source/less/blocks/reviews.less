@@ -1,12 +1,28 @@
 .reviews {
-  margin-bottom: 80px;
+  .container();
+  margin-bottom: 85px;
+}
+
+.reviews__title {
+  margin-left: -1px;
+  margin-bottom: 25px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
 }
 
 .reviews__button {
   display: flex;
-  min-width: 100%;
-  margin-bottom: 38px;
+  width: 100%;
+  margin-bottom: 39px;
   font-size: 0;
+}
+
+.reviews__button-feedback {
+  padding-top: 14px;
+  letter-spacing: 0.5px;
 }
 
 .review__button {
@@ -36,19 +52,11 @@
 }
 
 .review {
-  min-width: 255px;
   margin-bottom: 30px;
 }
 
-.reviews__title {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 30px;
-  color: #000000;
-}
-
 .review__text {
+  margin-bottom: 28px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -58,17 +66,21 @@
 
 .review__author {
   display: block;
-  margin-top: 25px;
-  margin-bottom: 5px;
+  margin: 0;
+  margin-bottom: 2px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 800;
   font-size: 17px;
   line-height: 24px;
+  letter-spacing: 0.1px;
   color: #000000;
 }
 
 .review__email {
-  display: inline-block;
-  box-sizing: border-box;
-  margin-top: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.05px;
+  color: #444444;
 }

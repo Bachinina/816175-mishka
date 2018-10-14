@@ -1,43 +1,79 @@
 .products {
-  padding-left: 0;
-  list-style: none;
+  .container();
+}
+
+.products__list {
+  .list-style();
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.product {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.product__link {
+  text-decoration: none;
 }
 
 .product__img {
   width: 100%;
   height: auto;
-  margin-bottom: 0;
 }
 
 .product__info {
-  margin-top: 0;
-  margin-bottom: 30px;
+  box-sizing: border-box;
+  margin-top: -3px;;
+  padding-top: 26px;
+  padding-left: 27px;
+  padding-right: 28px;
   border: 1px solid #ececec;
 }
 
 .product__title {
+  display: block;
+  margin-bottom: 5px;
   font-family: "Open Sans", "Aria", sans-serif;
   font-weight: 800;
   font-size: 17px;
   line-height: 24px;
+  letter-spacing: 0.05px;
   text-align: left;
   color: #000000;
 }
 
 .product__description {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 21px;
+  padding-bottom: 19px;
   font-family: "Open Sans", "Aria", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
   text-align: left;
   color: #444444;
+  border-bottom: 1px solid #ececec;
 }
 
 .product__price {
+  display: block;
+  margin-bottom: 27px;
   font-family: "Open Sans", "Aria", sans-serif;
   font-weight: 800;
   font-size: 15px;
   line-height: 24px;
   text-align: left;
   color: #000000;
+  background: url("../../img/icon-cart-catalog.svg") no-repeat 100% 50%;
 }
