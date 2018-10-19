@@ -1,12 +1,15 @@
+.social {
+  .list-style();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 140px;
+}
+
 .social__item {
-  display: inline-block;
   font-size: 0;
-  margin-right: 21px;
-  
-  &:first-child {
-    margin-left: 50px;
-  }
-  
+  margin-right: 20px;
+
   &:last-child {
     margin-right: 0;
   }
@@ -16,8 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: auto;
   
   path {
     fill: #000000;

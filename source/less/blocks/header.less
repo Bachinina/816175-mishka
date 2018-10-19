@@ -1,7 +1,11 @@
 .header {
-  margin-bottom: 20px;
+  margin-bottom: 31px;
   font-family: "Open Sans", "Aria", sans-serif;
   font-weight: 800;
+  
+  &--main {
+    margin-bottom: 20px;
+  }
 }
 
 .header__main-menu {
@@ -18,6 +22,9 @@
 .header__logo {
   display: block;
   margin-left: auto;
+  padding-top: 2px;
+  padding-left: 20px;
+
 
   &:hover {
     opacity: 0.6;
@@ -55,7 +62,12 @@
 
 @media (min-width: @tablet-width) {
   .header {
-    margin-bottom: 45px;  
+    
+    margin-bottom: 83px;
+    
+    &--main {
+      margin-bottom: 45px;
+    }
   }
   
   .header__navigation {
@@ -80,6 +92,7 @@
 
   .header__logo {
     margin-left: 0;
+    padding: 0;
     text-align: left;
   }
 
@@ -89,6 +102,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  
+  .header {
+    margin-bottom: 20px;
+  }
   
   .header__container {
     display: flex;

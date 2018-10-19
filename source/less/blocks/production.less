@@ -1,8 +1,10 @@
 .production {
-  .container();
   margin-top: 1px;
   margin-bottom: 60px;
-  box-sizing: border-box;
+}
+
+.production__container {
+	.container-mobile();
   border: 1px solid #ececec;
 }
 
@@ -43,4 +45,10 @@
   min-height: 48px;
   margin: 0 34px;
   margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) { 
+  .production__container {
+    .container-tablet;
+  }
 }

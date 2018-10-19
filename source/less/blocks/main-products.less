@@ -9,11 +9,7 @@
 .main-product {
   max-width: 260px;
   margin: 0 auto;
-}
-
-.main-product__description {
-  display: flex;
-  flex-direction: column;
+  margin-top: 26px;
 }
 
 .main-product__title {
@@ -38,7 +34,7 @@
 
 .main-product__comment {
   width: 250px;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
   font-size: 15px;
   line-height: 24px;
   letter-spacing: 0.07px;
@@ -48,7 +44,7 @@
 
 .main-product__table {
   width: 100%;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   border-collapse: collapse;
   font-size: 15px;
   line-height: 20px;
@@ -95,6 +91,10 @@
 }
 
 @media (min-width: @tablet-width) { 
+  .main-products {
+	  margin-bottom: 87px;
+  }
+  
   .main-products__container {
     .container-tablet();
   }
@@ -104,20 +104,22 @@
     flex-wrap: wrap;
     align-content: center;
     max-width: none;
-    margin: 0;
+    margin-left:  auto;
   }
   
    .main-product__description {
+    position: relative;
 	  display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+     width: 50%;
   }
   
   .main-product__title {
     width: 75%;
     margin: 0;
     margin-left: -4px;
-    margin-bottom: 33px;
+    margin-bottom: 50px;
     font-size: 43px;
     line-height: 50px;
     letter-spacing: 0.05px;
@@ -134,6 +136,7 @@
 
   .main-product__comment {
     width: 300px;
+    margin: 0;
     margin-bottom: 33px;
     font-size: 17px;
     line-height: 30px;
@@ -153,18 +156,73 @@
   }
   
   .main-product__price {
-    margin-left: -45px;
+    width: 290px;
+    margin-top: auto;
     margin-bottom: 34px;
+    padding: 0;
     font-size: 20px;
     line-height: 24px;
  }
   
   .main-product__button {
-    width: 292px;
+    width: 290px;
     min-height: 52px;
   }
   
   .main-product__img {
-    order: 3;
+    position: absolute;
+    top: 0;
+    right: -100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-products__container {
+    .container-desktop();
+    padding-top: 79px;
+    margin-bottom: 65px;
+  }
+  
+  .main-product {
+    display: flex;
+  }
+  
+  .main-product__title {
+    width: auto;
+    margin-left: 2px;
+    margin-bottom: 46px;
+    font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 0.01px;
+    order: 2;
+  }
+  
+  .main-product__legend {
+    box-sizing: border-box;
+    width: 16.14%;
+    margin: 0;
+    margin-top: 13px;
+    margin-left: -2px;
+    padding: 0 4.29%;
+    font-size: 17px;
+    line-height: 17px;
+    order: 1;
+  }
+  
+  .main-product__description {
+	  order: 3;
+    width: 33.33%;
+    min-height: 510px;
+    margin-left: 16.67%;
+    margin-right: 50%;
+  }
+  
+  .main-product__comment {
+	  margin-bottom: 49px;
+  }
+  
+  .main-product__table {
+    margin-top: -2px;
+    margin-bottom: 0;
   }
 }

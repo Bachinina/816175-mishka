@@ -4,7 +4,7 @@
 }
 
 .contacts__info {
-  .container();
+	.container-mobile();
 }
 
 .contacts__title {
@@ -20,7 +20,7 @@
 
 .contacts__table {
   width: 100%;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   border-collapse: collapse;
   font-size: 15px;
   line-height: 30px;
@@ -54,13 +54,114 @@
 }
 
 .contacts__map {
-  width: 100%;
+	margin: 0 auto;
+  text-align: center;
+}
+
+.contacts__map-img {
+  max-width: 100%;
   height: auto;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .contacts__button {
-  .container();
+  max-width: 260px;
+  margin: 0 auto;
   letter-spacing: 0.6px;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    margin-bottom: 10px;
+  }
+  
+  .contacts__container {
+	  .container-tablet();
+  }
+  .contacts__info {
+	  width: auto;
+    margin: 0;
+    margin-bottom: 27px;
+  }
+  
+  .contacts__title {
+    margin-left: -5px;
+    margin-bottom: 48px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  
+  .contacts__table {
+    font-size: 17px;
+    
+    tbody {
+      display: flex;
+    }
+  }
+  
+  .contacts__table-row {
+    width: 50%;
+  }
+  
+  .contacts__table-description {
+    br:nth-of-type(2) {
+      display: none;
+    }
+  }
+  
+  .contacts__map-img {
+    margin-bottom: 52px;
+  }
+  
+  .contacts__button {
+    max-width: 230px;
+    min-width: 230px;
+    margin: 0 auto;
+    letter-spacing: 0.2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  
+  .contacts {
+    margin-bottom: 104px;
+  }
+  
+  .contacts__container {
+	  .container-desktop();
+    position: relative;
+  }
+  
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16.67%;
+    order: 1;
+  }
+  
+  .contacts__title {
+    margin-top: -2px;
+	  font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 0.01px;
+ }
+  
+  .contacts__table {
+    margin-bottom: 24px;
+    tbody {
+      display: block;
+    }
+  }
+  
+  .contacts__button {
+    margin-left: 16.67%;
+	  order: 2;
+  }
+  
+  .contacts__map {
+    position: absolute;
+    top: -72px;
+    right: 0;
+  }
 }

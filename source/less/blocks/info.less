@@ -1,7 +1,10 @@
 .info {
-  .container();
   margin-top: 40px;
   margin-bottom: 45px;
+}
+
+.info__container {
+  .container-mobile();
 }
 
 .info__title {
@@ -31,4 +34,92 @@
   min-height: 105px;
   margin-bottom: 18px;
   padding-top: 56px;
+}
+
+@media (min-width: @tablet-width) {
+  
+  .info {
+    margin-bottom: 28px;
+  }
+  
+  .info__container {
+  .container-tablet();
+  }
+  
+  .info__title {
+    margin: 0;
+    margin-left: -4px;
+    margin-bottom: 46px;
+    font-size: 43px;
+    line-height: 50px;
+    letter-spacing: 0.01px;
+  }
+  
+  .info__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .info__item {
+    width: 50%;
+    margin-bottom: 50px;
+    
+    &--eco {
+      order: 1;
+    }
+    
+    &--like {
+      order: 5;
+    }
+    
+    &--price {
+      order: 3;
+    }
+    
+    &--handmade {
+      order: 2;
+    }
+    
+    &--country {
+      order: 4;
+    }
+    
+    &--wrapper {
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  
+  .info {
+    margin-top: 124px;
+    margin-bottom: 36px;
+  }
+  
+  .info__container {
+  .container-desktop();
+  }
+  
+  .info__title {
+    width: 66.67%;
+    margin-top: 0; 
+    margin-left: 16.2%;
+    margin-right: auto;
+    font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 0.001px;
+  }
+  
+  .info__list {
+    width: 66.67%;
+    margin: 0 16.66%;
+  }
+  
+  .info__item {
+    width: 50%;
+  }
 }

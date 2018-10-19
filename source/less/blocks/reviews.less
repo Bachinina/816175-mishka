@@ -1,6 +1,9 @@
 .reviews {
-  .container();
   margin-bottom: 85px;
+}
+
+.reviews__container {
+  .container-mobile();
 }
 
 .reviews__title {
@@ -13,19 +16,22 @@
   color: #000000;
 }
 
-.reviews__button {
+.reviews__buttons {
   display: flex;
-  width: 100%;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 39px;
   font-size: 0;
 }
 
 .reviews__button-feedback {
+  width: 260px;
+  margin: 0 auto;
   padding-top: 14px;
   letter-spacing: 0.5px;
 }
 
-.review__button {
+.reviews__button {
   display: block;
   box-sizing: border-box;
   width: 50%;
@@ -62,6 +68,10 @@
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  
+  br {
+      display: none;
+    }
 }
 
 .review__author {
@@ -83,4 +93,106 @@
   line-height: 30px;
   letter-spacing: 0.05px;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  
+  .reviews {
+    margin-bottom: 70px;
+    padding-top: 42px;
+    background: url("../../img/review@1x.jpg") no-repeat 0 0;	
+   }
+  
+  .reviews__container {
+    .container-tablet();
+    position: relative;
+    min-height: 457px;
+  }
+  
+  .reviews__title {
+    margin-left: -4px;
+    margin-bottom: 49px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  
+  .review {
+    width: 650px;
+  }
+  
+  .review__text {
+    margin-bottom: 58px;
+    font-size: 17px;
+  }
+  
+  .review__author {
+    letter-spacing: 0.7px;
+  }
+  
+  .review__email {
+    margin-bottom: 0;
+  }
+  
+  .reviews__buttons {
+    position: absolute;
+    top: 61.5%;
+    right: 0;
+    width: 175px;
+    margin-bottom: 0;
+  }
+  
+  .reviews__button {
+    min-width: 80px;
+	  border: none;
+  }
+  
+  .reviews__button-feedback {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    min-width: 175px;
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  
+  .reviews {
+    .container-desktop();
+    margin-bottom: 163px;
+    padding-top: 26px;
+    background: url("../../img/review@1x.jpg") no-repeat 0 0;
+   }
+  
+  .reviews__container {
+    width: 83.33%;
+    margin-left: 16.67%;
+  }
+  
+  .reviews__title {
+	  font-size: 53px;
+    line-height: 57px;
+  }
+  
+  .review__text {
+    width: 770px;
+    margin-bottom: 40px;
+    
+    br {
+      display: block;
+    }
+  }
+  
+  .review__author {
+    letter-spacing: 0.1px;
+  }
+  
+  .reviews__button-feedback {
+    top: 9px;
+  }
+  
+  .reviews__buttons {
+    position: absolute;
+    top: 52%;
+  }
 }
