@@ -1,44 +1,92 @@
 .description {
-  min-height: 180px;
-  font-family: inherit;
-  font-weight: inherit;
+  min-height: 170px;
   font-size: 19px;
   line-height: 24px;
-  color: inherit;
+  background: none;
+  background-color: #f1f1f1;
 
   &--main-page {
-    background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% -50px;
+    min-height: 180px;
+    padding-top: 20px;
+    background: #f9f9f9 url("../../img/hero-mobile@1x.jpg") no-repeat 50% -20px;
+    
+    .description__info {
+      padding-top: 10px;
+    }
   }
+}
+
+.description__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.description__menu {
+  .list-style();
+  display: none;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  text-align: left;
+  color: #000000;
+  
+  .description__menu-link {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 33px;
+    padding-right: 30px;
+    
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.description__comment {
+  display: none;
+  margin: 5px 0;
+  font-family: "Open Sans", "Aria", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
 }
 
 .description__title {
   display: flex;
   justify-content: center;
-  align-items: center;
   box-sizing: border-box;
-  min-width: 300px;
-  min-height: 175px;
-  margin-top: 0;
-  padding: 0 30px;
+  min-height: 176px; 
+  margin: 0;
+  margin-left: -2px;
+  padding: 30px;
+  padding-top: 70px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-  background-color: #f1f1f1;
 
   &--main-page {
-    background-color: transparent;
+    min-height: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-top: 40px;
   }
 }
 
 .description__list {
-  margin: 0;
-  margin-top: 100px;
-  padding-left: 0;
-  list-style: none;
+  .list-style();
+  margin-top: 93px;
 }
 
 .description__item {
-  min-height: 103px;
+  min-height: 100px;
 
   &--products {
     background-color: #63d1bb;
@@ -50,13 +98,118 @@
 }
 
 .description__link {
-  display: inline-block;
-  width: 130px;
-  padding-top: 30px;
+  display: block;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 29px;
+  font-size: 19px;
+  line-height: 24px;
   text-decoration: none;
   color: #ffffff;
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+  
+  span {
+    display: block;
+    width: 130px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  
+  .description {
+    padding-top: 10px;
+    
+    .description__title{
+      padding-top: 50px;
+    }
+    
+    &--main-page {
+      padding-top: 0;
+      background: #f9f9f9 url("../../img/hero-tablet@1x.jpg") no-repeat 50% 0;
+      
+      .description__title{
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 68px;
+        margin-bottom: 343px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+  
+  .description__container {
+    .container-tablet();
+  }
+  
+  .description__comment {
+    display: block;
+    margin-left: auto;
+  }
+  
+  .description__title {
+    font-size: 43px;
+    line-height: 50px;
+    
+    br {
+      display: none;
+    }
+  }
+  
+  .description__list {
+    display: flex;
+  }
+  
+  .description__item {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    min-height: 119px;
+  }
+  
+  .description__link {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 19px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+    
+    &--main-page {
+      padding-top: 0;
+      background: #f9f9f9 url("../../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+      
+    .description__title{
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 52px;
+        margin-bottom: 330px;
+        font-size: 53px;
+        line-height: 57px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+  
+  .description__container {
+    .container-desktop();
+  }
+  
+  .description__info {
+    min-height: 60px;
+    padding: 0;
+  }
+  
+  .description__menu {
+    display: flex;
   }
 }

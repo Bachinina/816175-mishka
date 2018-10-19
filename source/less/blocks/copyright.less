@@ -1,9 +1,38 @@
+.copyright {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
 .copyright__comment {
   display: block;
+  margin-top: -5px;
   margin-right: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 800;
   font-size: 19px;
   line-height: 18px;
   color: #000000;
+}
+
+.copyright__link {
+  margin-top: 5px;
+  
+  path {
+    fill: #63d1bb;
+  }
+  
+  &:hover {
+    path {
+      fill: #46c1ae;
+    }
+  }
+  
+  &:active {
+    path {
+      fill: rgba(70, 193, 174, 0.3);
+    }
+  }
 }
