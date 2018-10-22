@@ -13,6 +13,13 @@
     .description__info {
       padding-top: 10px;
     }
+    
+    .description__title {
+      min-height: auto;
+      margin-left: 0;
+      margin-bottom: 0;
+      padding-top: 40px;
+    }
   }
 }
 
@@ -71,13 +78,6 @@
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-
-  &--main-page {
-    min-height: auto;
-    margin-left: 0;
-    margin-bottom: 0;
-    padding-top: 40px;
-  }
 }
 
 .description__list {
@@ -124,10 +124,6 @@
   .description {
     padding-top: 10px;
     
-    .description__title{
-      padding-top: 50px;
-    }
-    
     &--main-page {
       padding-top: 0;
       background: #f9f9f9 url("../../img/hero-tablet@1x.jpg") no-repeat 50% 0;
@@ -152,6 +148,7 @@
   }
   
   .description__title {
+    padding-top: 50px;
     font-size: 43px;
     line-height: 50px;
     
@@ -183,21 +180,26 @@
 
 @media (min-width: @desktop-width) {
   .description {
+    min-height: 255px;
+    padding-top: 0;
     
     &--main-page {
-      padding-top: 0;
       background: #f9f9f9 url("../../img/hero-desktop@1x.jpg") no-repeat 50% 0;
       
-    .description__title{
-        width: 700px;
-        margin: 0 auto;
-        margin-top: 52px;
-        margin-bottom: 330px;
-        font-size: 53px;
-        line-height: 57px;
-        letter-spacing: 0.2px;
-      }
+      .description__title{
+          margin-top: 40px;
+          margin-bottom: 330px;
+        }
     }
+  }
+  
+  .description__title{
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 35px;
+    font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
   }
   
   .description__container {
