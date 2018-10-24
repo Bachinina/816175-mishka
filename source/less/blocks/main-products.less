@@ -1,5 +1,18 @@
 .main-products {
+  position: relative;
   margin-bottom: 68px;
+  
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -36px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    background: url("../../img/bg-zigzag-line.svg") repeat;
+    background-size: 768px auto;
+  }
 }
 
 .main-products__container {
@@ -93,6 +106,10 @@
 @media (min-width: @tablet-width) { 
   .main-products {
 	  margin-bottom: 87px;
+    
+    &::after {
+      display: block;
+    }
   }
   
   .main-products__container {
@@ -104,7 +121,7 @@
     flex-wrap: wrap;
     align-content: center;
     max-width: none;
-    margin-left:  auto;
+    margin-left: auto;
   }
   
    .main-product__description {
@@ -171,12 +188,18 @@
   
   .main-product__img {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: -100%;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-products {
+    &::after {
+      display: none;
+    }
+  }
+  
   .main-products__container {
     .container-desktop();
     padding-top: 79px;
@@ -184,17 +207,31 @@
   }
   
   .main-product {
+    position: relative;
     display: flex;
+    
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -60px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 20px;
+      background: url("../../img/bg-zigzag-line.svg") repeat -27px 0;
+      background-size: 1050px auto;
+    }
   }
   
   .main-product__title {
+    position: absolute;
     width: auto;
-    margin-left: 2px;
-    margin-bottom: 46px;
+    left: 16.67%;
+    top: -2px;
     font-size: 53px;
     line-height: 57px;
     letter-spacing: 0.01px;
-    order: 2;
+    z-index: 2;
   }
   
   .main-product__legend {
@@ -213,6 +250,7 @@
 	  order: 3;
     width: 33.33%;
     min-height: 510px;
+    margin-top: 57px;
     margin-left: 16.67%;
     margin-right: 50%;
   }
@@ -224,5 +262,13 @@
   .main-product__table {
     margin-top: -2px;
     margin-bottom: 0;
+  }
+  
+  .main-product__img {
+    position: absolute;
+    top: -155px;
+    right: -525px;
+    max-width: none;
+    z-index: 1;
   }
 }

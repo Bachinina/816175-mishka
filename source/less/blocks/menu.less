@@ -18,6 +18,8 @@
 
 .menu__link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 26px;
   font-size: 17px;
@@ -25,13 +27,33 @@
   text-decoration: none;
   text-align: left;
   color: #000000;
+  
+  path {
+    fill: rgba(35, 31, 32, 0.2);
+  }
 
   &:hover {
-    opacity: 0.6;
+    span {
+      opacity: 0.6;
+    }
+
+    path {
+      fill: #63d1bb;
+    }
   }
 
   &:active {
-    opacity: 0.3;
+    span {
+      opacity: 0.3;
+    }
+    
+    path {
+      fill: rgba(99, 209, 187, 0.3);
+    }
+  }
+  
+  svg {
+    margin-right: 25px;
   }
 }
 
@@ -69,6 +91,7 @@
     
     .menu__link {
       display: flex;
+      justify-content: space-between;
       height: auto;
       padding-left: 0;
       padding-top: 17px;
@@ -99,24 +122,26 @@
     .menu__link {
       display: block;
       box-sizing: border-box;
-      height: auto;
+      height: 100%;
+      padding-left: 31px;
       padding-top: 32px;
       padding-bottom: 32px;
+      
+      &--search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        font-size: 0;
+      }
     }
   }
-  
-  .menu__item--search {
-    .menu__link {
-      width: 100%;
-      font-size: 0;
+}
+
+  .menu__link--search {
+    svg {
+      margin: 0;
     }
-  }
-  
-  .menu__item--basket {
-    .menu__link {
-      padding-left: 81px;
-    }
-  } 
 }
 
 @media (min-width: @desktop-width) {  

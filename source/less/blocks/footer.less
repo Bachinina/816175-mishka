@@ -18,6 +18,10 @@
 
 .footer__logo {
   display: none;
+  
+  svg {
+    .footer-style();
+  }
 }
 
 .footer__social {
@@ -55,10 +59,11 @@
   
   .footer__logo {
     display: block;
-    margin-right: 14.26%;
+    margin-right: 12%;
   }
   
   .footer__social {
+    padding-top: 10px;
     &::after {
       display: none;
     }
@@ -77,10 +82,22 @@
   
   .footer__logo {
     display: block;
-    margin-right: 9%;
+    margin-right: 7.4%;
+  }
+  
+  .footer__social {
+//	  padding-top: 10px;
   }
   
   .footer__copyright {
 	  padding: 0;
+    
+    span {
+      padding-top: 5px;
+    }
+    
+    svg {
+      margin-top: 5px;
+    }
   }
 }
