@@ -1,3 +1,7 @@
+.request {
+  margin-bottom: 55px;
+}
+
 .request__container {
   .container-mobile();
 }
@@ -15,13 +19,36 @@
 }
 
 @media (min-width: @tablet-width) {
+  
+  .request {
+    margin-top: 77px;
+    margin-bottom: 50px;
+  }
+  
   .request__container {
+    width: auto;
+    margin: 0;
+  }
+  
+  .request__description {
     .container-tablet();
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .request__container {
+  
+  .request {
+    margin-top: 122px;
+    margin-bottom: 47px;
+  }
+  
+  .request__description {
     .container-desktop();
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
 }
