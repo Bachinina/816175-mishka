@@ -1,0 +1,62 @@
+.review {
+  margin-bottom: 30px;
+}
+
+.review__text {
+  margin-bottom: 28px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+
+  br {
+      display: none;
+    }
+}
+
+.review__author {
+  display: block;
+  margin: 0;
+  margin-bottom: 2px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.review__email {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+
+  .review {
+    width: 650px;
+  }
+
+  .review__text {
+    margin-bottom: 58px;
+    font-size: 17px;
+  }
+
+  .review__email {
+    margin-bottom: 0;
+  }
+
+@media (min-width: @desktop-width) {
+
+  .review__text {
+    width: 770px;
+    margin-bottom: 40px;
+
+    br {
+      display: block;
+    }
+  }
+}
