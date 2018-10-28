@@ -27,7 +27,8 @@
     "build": "gulp build",
     "start": "npm run build && gulp serve",
     "minify": "gulp images",
-    "webpx": "gulp webp"
+    "webpx": "gulp webp",
+    "dev": "gulp start"
   },
   "browserslist": [
     "last 2 versions",
