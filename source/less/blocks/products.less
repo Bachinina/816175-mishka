@@ -1,5 +1,5 @@
 .products {
-  margin-bottom: 0;
+  margin-bottom: 32px;
 }
 
 .products__container {
@@ -30,6 +30,7 @@
   .products__list {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     height: auto;
     margin: 0;
   }
@@ -38,20 +39,17 @@
 @media (min-width: @desktop-width) {
 
   .products {
-    margin-top: 120px;
-    margin-bottom: 55px;
+    margin-top: 129px;
+    margin-bottom: 26px;
   }
 
   .products__container {
     .container-desktop();
-    padding-top: 6px;
   }
 
   .products__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
   }
 }

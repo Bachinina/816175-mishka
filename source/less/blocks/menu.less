@@ -37,8 +37,8 @@
     span {
       opacity: 0.6;
     }
-
-    path {
+    
+    .menu__svg {
       fill: #63d1bb;
     }
   }
@@ -47,14 +47,15 @@
     span {
       opacity: 0.3;
     }
-
-    path {
+    
+    .menu__svg {
       fill: rgba(99, 209, 187, 0.3);
     }
   }
 
-  svg {
+  .menu__svg {
     display: none;
+    fill: rgba(35, 31, 32, 0.2);
   }
 }
 
@@ -88,7 +89,7 @@
     line-height: 24px;
     color: #000000;
 
-    svg {
+    .menu__svg {
       display: inline-block;
       margin-right: 25px;
     }
@@ -162,6 +163,7 @@
       padding-left: 31px;
       padding-top: 32px;
       padding-bottom: 32px;
+      padding-right: 28px;
 
       &--search {
         display: flex;
@@ -174,7 +176,7 @@
   }
 
     .menu__link--search {
-      svg {
+      .menu__svg {
         margin: 0;
     }
   }
@@ -208,10 +210,10 @@
 
     .menu__link {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       box-sizing: border-box;
       min-height: 86px;
-      padding-top: 10px;
+      padding-top: 32px;
       padding-left: 35px;
       padding-right: 35px;
       font-size: 17px;
@@ -220,6 +222,7 @@
 
     .menu__item:first-child .menu__link {
       padding-left: 50px;
+      padding-top: 30px;
     }
   }
 
@@ -232,25 +235,18 @@
 
     .menu__item:not(.menu__item--search) {
       .menu__link {
-        padding-right: 50px;
+        padding-top: 32px;
+        padding-right: 53px;
       }
     }
     
     .menu__link {
       font-size: 17px;
       line-height: 24px;
-    }
-    
-    .menu--main-nav {
-      order: 1;
-      align-self: flex-start;
-      margin-bottom: 0;
-      padding-left: 0;
-    }
-
-    .menu--user-menu {
-      align-self: flex-start;
-      order: 3;
+      
+      &--search {
+        font-size: 0;
+      }
     }
   }
 }

@@ -139,6 +139,12 @@
   box-shadow:0 0 0 10px #ffffff inset;
 }
 
+.filter__input:focus ~ .filter__label {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .filter__input--radio:hover ~ .filter__label--check::before {
   border: 2px solid #62d1ba;
 }
@@ -305,11 +311,12 @@
   }
 
   .filter-type .filter__item {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   .filter-color {
     padding-top: 46px;
+    background-color: #f1f1f1;
   }
 
   .filter-color .filter__title {
@@ -381,7 +388,7 @@
       margin-left: 25%;
       font-size: 19px;
       padding-left: 17px;
-      background-color: inherit;
+      background-color: #f1f1f1;
     }
   }
 
@@ -444,6 +451,7 @@
     background: url("../../img/icon-tick.svg") no-repeat 50% 50%;
     background-size: 35px 30px;
   }
+}
 
 @media (min-width: @desktop-width) {
   
@@ -476,6 +484,7 @@
   }
 
   .filter-color {
+    padding-top: 45px;
     background-color: #f1f1f1;
 
     .filter__title {
@@ -491,11 +500,14 @@
 
   .filter-color .filter__item {
     display: flex;
-    justify-content: space-between;
     width: 30%;
 
     &:nth-child(2n) {
       width: 30%;
+    }
+    
+    &:nth-child(3n) {
+      width: 40%;
     }
   }
 
@@ -533,8 +545,12 @@
 
   .filter-email {
     margin-bottom: 30px;
-    padding-top: 28px;
+    padding-top: 26px;
     padding-bottom: 50px;
+    
+    .filter__title {
+      margin-top: 18px;
+    }
   }
 
   .filter-other {
@@ -546,11 +562,5 @@
       width: 66.67%;
       margin-left: 16.67%;
     }
-  }
-
-  .filters__bottom {
-    .container-desktop();
-    width: 700px;
-    margin: 0 auto;
   }
 }

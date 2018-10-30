@@ -2,7 +2,7 @@
   position: relative;
   margin-bottom: 25px;
   font-family: "Open Sans", "Aria", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
 
   &--main {
     margin-bottom: 20px;
@@ -151,7 +151,9 @@
   }
 
   .header--main {
+    margin-bottom: 17px;
     &::after {
+      background: url("../../img/bg-zigzag-fill.svg") repeat -45px 0;
       background-size: 1250px auto;
     }
   }
@@ -185,6 +187,18 @@
 
     .header__logo {
       margin-left: -20px;
+    }
+    
+    .header__menu--main-nav {
+      order: 1;
+      align-self: flex-start;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+
+    .header__menu--user-menu {
+      align-self: flex-start;
+      order: 3;
     }
   }
 }
