@@ -12,14 +12,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 26px;
-
+  padding-top: 24px;
 }
 
 .footer__logo {
   display: none;
 
-  svg {
+  .footer__svg {
     .footer-style();
   }
 }
@@ -31,6 +30,7 @@
     content: "";
     position: absolute;
     bottom: -23px;
+    left: -70px;
     display: block;
     width: 260px;
     height: 1px;
@@ -39,7 +39,7 @@
 }
 
 .footer__copyright {
-  margin-top: 34px;
+  margin-top: 33px;
 }
 
 @media (min-width: @tablet-width) {
@@ -64,6 +64,7 @@
 
   .footer__social {
     padding-top: 10px;
+
     &::after {
       display: none;
     }
@@ -86,7 +87,7 @@
   }
 
   .footer__social {
-    padding-top: 0;
+    padding-top: 10px;
   }
 
   .footer__copyright {
@@ -96,7 +97,7 @@
       padding-top: 5px;
     }
 
-    svg {
+    .footer__svg {
       margin-top: 5px;
     }
   }
