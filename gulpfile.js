@@ -62,7 +62,7 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
   ]))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("source"));
 });
 
 gulp.task("copy", function() {
@@ -100,8 +100,8 @@ gulp.task("build", function (done) {
     "clean",
     "style",
     "sprite",
-    "copy",
     "html",
+    "copy",
     done
   );
 });
