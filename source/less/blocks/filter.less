@@ -53,7 +53,7 @@
   &--check {
     position: relative;
     padding-left: 62px;
-    }
+  }
 
   &--text {
     padding-top: 20px;
@@ -120,7 +120,7 @@
   }
 }
 
-.filter-other  .filter__title {
+.filter-other .filter__title {
   margin-bottom: 23px;
 }
 
@@ -141,8 +141,8 @@
 
 .filter__input:focus ~ .filter__label {
   border-color: #663d15;
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline-style: dotted;
+  outline-width: 5px;
 }
 
 .filter__input--radio:hover ~ .filter__label--check::before {
@@ -253,7 +253,6 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .filter:nth-child(2n):not(.filter-email, .filter-other) {
     background-color: #f1f1f1;
 
@@ -428,7 +427,7 @@
   .filter__input--radio ~ .filter__label--check::before {
     width: 52px;
     height: 53px;
-    box-shadow:0 0 0 15px #ffffff inset;
+    box-shadow: 0 0 0 15px #ffffff inset;
   }
 
   .filter__input--checkbox ~ .filter__label--check::before {
@@ -454,7 +453,6 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .filter:nth-child(2n):not(.filter-email, .filter-other) {
     background-color: #f1f1f1;
 
