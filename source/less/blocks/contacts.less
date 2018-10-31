@@ -47,9 +47,10 @@
 }
 
 .contacts__table-description {
+  max-width: 140px;
   padding-top: 0;
   padding-bottom: 29px;
-  min-width: 185px;
+  padding-right: 40px;
 }
 
 .contacts__email {
@@ -135,9 +136,8 @@
   }
 
   .contacts__table-description {
-    br:nth-of-type(2) {
-      display: none;
-    }
+    max-width: none;
+    padding-right: 0;
   }
 
   .contacts__map-img {
@@ -192,6 +192,10 @@
     tbody {
       display: block;
     }
+  }
+
+  .contacts__table-description {
+    max-width: 250px;
   }
 
   .contacts__button {
